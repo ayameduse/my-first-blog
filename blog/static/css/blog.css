@@ -45,3 +45,48 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
+  /* unvisited link */
+a:link {
+  color:  #ffffff;
+}
+
+/* visited link */
+a:visited {
+  color:  #7e5edc;
+}
+
+/* mouse over link */
+a:hover {
+  color:  #541ef1;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+} 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+/* On travaille sur la balise body, donc sur TOUTE la page */
+body
+{
+    background-color:  #fff2fb; 
+    color: black; 
+
+}    
+
+
+ 
