@@ -1,4 +1,5 @@
 {% load static %}
+<!DOCTYPE html>
 <html>
     <head>
         <title>Ayameduse blog</title>
@@ -6,41 +7,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-{% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-{% endif %}
-        <center>
-            <h1><a href="/">Ayameduse </a></h1>
-            <div class="topnav">
-              <a href="https://www.melaniemartinezmusic.com/l">Melanie site</a>
-              <a href="http://www.loverisaday.com/">Cuco site</a>
-              <a href="https://jackstauber.bandcamp.com//">Jack Stauber site</a>
-              <a href="https://www.clairo.com/">Clairo site</a>
-              <a href="https://www.instagram.com/ayameduse/?hl=fr" style="float:right">my instagram</a>
-</div>
+    <style>
 
-        </center>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
 * {
   box-sizing: border-box;
 }
@@ -147,30 +115,56 @@ body {
     width: 100%;
 }
 </style>
-</head>
-<body>
+    </head>
+
+
+
+
+
+    <body>
+           <div class="page-header">
+{% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+        <center>
+            <h1><a href="/">Ayameduse </a></h1>
+            <img src="{% static 'images/bunny.gif' %}"  height="140" width="140"alt="bunny">
+            </center>
+              <div class="topnav">
+              <a href="https://www.melaniemartinezmusic.com/l">Melanie website</a>
+              <a href="http://www.loverisaday.com/">Cuco website</a>
+              <a href="https://jackstauber.bandcamp.com//">Jack Stauber website</a>
+              <a href="https://www.clairo.com/">Clairo website</a>
+              <a href="https://www.instagram.com/ayameduse/?hl=fr" style="float:right">my instagram</a>
+</div>
+       
+               </div>
+
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>cc</h2>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>cc</p>
-      <p>jsp</p>
+      <center>
+      <h2>Jack Stauber</h2>
+      <img src="{% static 'images/bleu.gif' %}" height="36" width="200" alt="pixel art">
+      <div class="fakeimg"><p;"><img src="{% static 'images/jack stauber.jpg' %}" height="260" width="480" alt="K12"></p></div>
+      <p>text</p>
+      <p>text</p>
+      </center>
     </div>
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
       <center>
-      <div class="fakeimg" style="height:200px;"></p></div>
-    </center>
-      <p>cc.</p>
-      <p>cc.</p>
+      <h2>Cuco</h2>
+      <img src="{% static 'images/bleu.gif' %}" height="36" width="200" alt="pixel art">
+      <div class="fakeimg"><p><img src="{% static 'images/cuco.jpg' %}" height="260" width="480" alt="cuco"></p></div></p></
+      </center>
+      <p>text</p>
+      <p>text</p>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h2>About Me</h2>
-      <p>cc</p>
+      <p>TEXT</p>
     </div>
     <div class="card">
       <h3>Popular Post</h3>>
@@ -182,12 +176,27 @@ body {
     <div class="card">
       
     </div>
-  </div>
-</div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
 
 
-</body>
-</html>
+
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>1
+
+
+
+
+
+
+
+  
 
 
 
