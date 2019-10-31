@@ -18,11 +18,9 @@
         <img src="{% static 'images/bunny.gif' %}"  height="140" width="140"alt="bunny">
       </center>
       <div class="topnav">
-        <a href="https://www.melaniemartinezmusic.com/l">Melanie website</a>
-        <a href="http://www.loverisaday.com/">Cuco website</a>
-        <a href="https://jackstauber.bandcamp.com//">Jack Stauber website</a>
-        <a href="https://www.clairo.com/">Clairo website</a>
-        <a href="https://www.instagram.com/ayameduse/?hl=fr" style="float:right">my instagram</a>
+        {% for post in posts %}
+        <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        {% endfor %}
       </div>   
     </div>
 

@@ -16,7 +16,10 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    return render(request, 'blog/post_detail.html', {
+        'post': post,
+        'posts': Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    })
 
 
 def post_new(request):
@@ -30,7 +33,10 @@ def post_new(request):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
+    return render(request, 'blog/post_edit.html', {
+        'form': form, 
+        'posts': Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    })
 
 
 def post_edit(request, pk):
@@ -47,4 +53,7 @@ def post_edit(request, pk):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
-    return render(request, 'blog/post_edit.html', {'form': form})
+    return render(request, 'blog/post_edit.html', {
+        'form': form,
+        'posts': Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    })
