@@ -8,10 +8,10 @@
 	      <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 	      <div class="date">{{ post.published_date }}</div>
 	      <img src="{% static 'images/bleu.gif' %}" height="36" width="200" alt="pixel art">
-	      
 	      {% if post.image %}
 	      <div class="fakeimg"><p;"><img src="{{ MEDIA_URL }}{{ post.image.url }}" height="260" width="480" alt="image"></p></div>
 	      {% endif %}
+
 	      
 	      <p>{{ post.text|linebreaksbr }}</p>
 	      </center>
